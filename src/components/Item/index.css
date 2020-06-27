@@ -2,14 +2,20 @@ li {
     margin:10px 0 10px 0;
 }
 
+.row {
+    display: flex;
+}
+
 .finished {
     text-decoration: line-through;
 }
 
 .left {
     text-align:left;
+    flex: auto;
 }
 
 .right {
     text-align: right;
+    flex: none;
 }

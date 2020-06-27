@@ -14,13 +14,16 @@ class Item extends Component {
                 {
                     data => (
                         <li>
-                            <div type="flex" justify="center" align="middle">
-                                <div span={12} className="left">
-                                    <input className={left_class} checked={this.props.complete} onChange={data.changeComplete.bind(this,this.props.id)}>{this.props.content}</input>
+                            <div className="row">
+                                <div className="left">
+                                    <input id={`checkbox-${this.props.id}`} type="checkbox" className={left_class} checked={this.props.complete} onChange={data.changeComplete.bind(this,this.props.id)} />
+                                    <label htmlFor={`checkbox-${this.props.id}`}>
+                                        {this.props.content}
+                                    </label>
                                 </div>
-                                <iv span={12} className="right">
+                                <div className="right">
                                     <button type="danger" onClick={data.deleteDate.bind(this,this.props.id)}>删除</button>
-                                </iv>
+                                </div>
                             </div>
                         </li>
                     )

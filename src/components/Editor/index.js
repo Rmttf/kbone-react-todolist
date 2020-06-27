@@ -13,18 +13,19 @@ class Editor extends Component {
             <AppContext.Consumer>
                 {
                     data => (
-                        <div>
-                            <div type="flex" justify="center" align="middle">
-                                <div span={10}>
-                                    <input ref={this.input} className="Editor-input" type="text" placeholder="请输入..."/>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <button type="primary" onClick={data.changeState.bind(this,this.input)}>保存</button>
-                                </div>
-                            </div>
-                        </div>
+                      <div>
+                          <div>
+                              <input
+                                ref={this.input}
+                                className="Editor-input"
+                                type="text"
+                                placeholder="请输入..."
+                                onKeyPress={e => e.nativeEvent.keyCode === 13 ? data.changeState.call(this, this.input) : null}/>
+                          </div>
+                          <div>
+                              <button type="primary" onClick={data.changeState.bind(this, this.input)}>保存</button>
+                          </div>
+                      </div>
                     )
                 }
             </AppContext.Consumer>

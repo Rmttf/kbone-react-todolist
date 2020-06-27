@@ -40,7 +40,7 @@ class App extends Component {
 
             this.setState({length: length});
             this.sortByState(new_data);
-            input.current.state.value = '';
+            input.current.value = '';
             input.current.focus();
         }
     }
