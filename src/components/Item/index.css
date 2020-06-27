@@ -1,0 +1,15 @@
+li {
+    margin:10px 0 10px 0;
+}
+
+.finished {
+    text-decoration: line-through;
+}
+
+.left {
+    text-align:left;
+}
+
+.right {
+    text-align: right;
+}
